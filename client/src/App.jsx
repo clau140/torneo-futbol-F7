@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Teams from "./pages/Teams";
 import Matches from "./pages/Matches";
 import Standings from "./pages/Standings";
+import EquipoDetalle from "./pages/EquipoDetalle";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
   <Link to="/teams" className="hover:text-white transition">Equipos</Link>
   <Link to="/matches" className="hover:text-white transition">Fixture</Link>
   <Link to="/standings" className="hover:text-white transition">Tabla</Link>
+  
 </nav>
 
 
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/teams" element={<Teams />} />
         <Route path="/matches" element={<Matches />} />
         <Route path="/standings" element={<Standings />} />
+        <Route path="/equipo/:nombre" element={<EquipoDetalle />} />
       </Routes>
     </div>
   );
